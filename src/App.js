@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Emp1 from './Emp1';
+import Form from './Form';
+import Reactcss from './Reactcss';
+import Fvwe from './Fvwe';
 
 function App() {
+  const[data,setData] = useState("Pankaj")
+  function updateData()
+  {
+    setData("Keyur")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+      <h1>{data}</h1>
+      <button onClick={updateData}>updateData</button>
+
+      <Emp1 />
+      <Form />
+      <Fvwe />
+      <Reactcss/>
+   </div>
   );
 }
 
