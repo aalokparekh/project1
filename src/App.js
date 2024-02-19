@@ -5,6 +5,8 @@ import Emp1 from './Emp1';
 import Form from './Form';
 import Reactcss from './Reactcss';
 import Fvwe from './Fvwe';
+import HP from './HK_params';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 
 function App() {
   const[data,setData] = useState("Pankaj")
@@ -21,6 +23,10 @@ function App() {
       <Form />
       <Fvwe />
       <Reactcss/>
+      <BrowserRouter>
+        
+        <HP />
+      </BrowserRouter>
    </div>
   );
 }
